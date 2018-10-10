@@ -13,6 +13,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         WebView webView = findViewById(R.id.webView);
         WebViewUtil.WebViewSetting(webView);
-        WebViewUtil.WebViewLoadPDF(webView, "http://p1956v3nv.bkt.clouddn.com/1944717.pdf");
+        WebViewUtil.WebViewLoadPDF(webView, "http://p1956v3nv.bkt.clouddn.com/2014.pdf");
     }
 }

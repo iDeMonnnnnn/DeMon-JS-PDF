@@ -25,10 +25,38 @@ dependencies {
 ```
 
 3.在WebView中加载PDF
+
 ```java
    WebView webView = findViewById(R.id.webView);
-   WebViewUtil.WebViewSetting(webView);//WebView的基本设置
-   WebViewUtil.WebViewLoadPDF(webView, "your pdf");//可以是链接，也可以是本地pdf文件路径
+   //框架内部对WebView的默认设置
+   WebViewUtil.WebViewSetting(webView);
+   //框架内部对url进行了编码，防止因为中文无法加载的情况
+   //yourpdf可以是链接，也可以是本地pdf文件路径
+   WebViewUtil.WebViewLoadPDF(webView, "yourpdf");
+```
+
+or
+
+```java
+   WebView webView = findViewById(R.id.webView);
+   //你对webView的设置
+   ...
+   //yourpdf可以是链接，也可以是本地pdf文件路径
+   webView.loadUrl("file:///android_asset/pdf/pdf.html?" + yourpdf);
+```
+
+### 注意
+
+1.如果是网络链接的PDF，需要使用网络的权限。
+
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
+2.如果是本地文件的PDF，需要读取设备内容的权限。
+
+```
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 ```
 
 ### BUG or 问题

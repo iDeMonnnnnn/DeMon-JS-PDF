@@ -45,11 +45,8 @@ public class WebViewUtil {
                     e.printStackTrace();
                 }
                 if (bytes != null) {
-
                     docPath = new BASE64Encoder().encode(bytes);// BASE64转码
-
                 }
-
             }
             webView.loadUrl("file:///android_asset/pdf/pdf.html?" + docPath);
         }
