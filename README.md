@@ -5,6 +5,8 @@
 
 原文链接：[Android 实现PDF预览的全面解析](https://blog.csdn.net/DeMonliuhui/article/details/81185611)  
 
+![Effect](https://raw.githubusercontent.com/DeMonLiu623/DeMon-JS-PDF/master/img/demo.png)
+
 ### 使用
 
 1.在工程的build.gradle添加:
