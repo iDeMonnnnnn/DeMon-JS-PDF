@@ -1,7 +1,7 @@
 [![](https://jitpack.io/v/DeMonLiu623/DeMon-JS-PDF.svg)](https://jitpack.io/#DeMonLiu623/DeMon-JS-PDF)
 
 # DeMon-JS-PDF
-一个基于[PDF.js](http://mozilla.github.io/pdf.js/)，使用cdn的方式导入,自定义界面的PDF预览框架。
+**一个基于[PDF.js](http://mozilla.github.io/pdf.js/)，使用cdn的方式导入,自定义界面的PDF预览框架。**
 
 原文链接：[Android 实现PDF预览的全面解析](https://blog.csdn.net/DeMonliuhui/article/details/81185611)  
 
