@@ -3,6 +3,7 @@ package com.demon.js_pdf;
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.text.TextUtils;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -14,9 +15,14 @@ import java.io.UnsupportedEncodingException;
  * @date 2018/7/22
  * @description
  */
-public class WebViewUtil {
+public class WebViewHelper {
     @SuppressLint("SetJavaScriptEnabled")
     public static void WebViewSetting(WebView webView) {
+        WebViewSetting(webView, null);
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    public static void WebViewSetting(WebView webView, final PDFListener listener) {
         WebSettings settings = webView.getSettings();
         settings.setSavePassword(false);
         settings.setJavaScriptEnabled(true);
@@ -29,6 +35,15 @@ public class WebViewUtil {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
                 return true;
+            }
+        });
+        webView.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onProgressChanged(WebView view, int newProgress) {
+                super.onProgressChanged(view, newProgress);
+                if (listener != null) {
+                    listener.LoadProgress(newProgress);
+                }
             }
         });
     }
@@ -51,4 +66,10 @@ public class WebViewUtil {
             webView.loadUrl("file:///android_asset/pdf/pdf.html?" + docPath);
         }
     }
+
+
+    public interface PDFListener {
+        void LoadProgress(int progress);
+    }
+
 }
