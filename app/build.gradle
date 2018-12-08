@@ -29,4 +29,5 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation project(':JS_PDF')
     //implementation 'com.github.DeMonLiu623:DeMon-JS-PDF:v1.0'
+    implementation 'com.android.support:design:28.0.0'
 }

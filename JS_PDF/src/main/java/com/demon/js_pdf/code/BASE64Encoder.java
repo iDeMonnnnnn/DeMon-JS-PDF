@@ -1,4 +1,4 @@
-package com.demon.js_pdf;
+package com.demon.js_pdf.code;
 
 import java.io.IOException;
 import java.io.OutputStream;

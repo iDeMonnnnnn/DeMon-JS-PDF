@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NumberProgressBar">
+        <attr name="nTextColor" format="color" />
+        <attr name="nTextSize" format="dimension" />
+        <attr name="nMax" format="integer" />
+        <attr name="nCircleColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="DWebView">
+        <attr name="dwv_isProgress" format="boolean" />
+        <attr name="dwv_isSetting" format="boolean" />
+    </declare-styleable>
+</resources>

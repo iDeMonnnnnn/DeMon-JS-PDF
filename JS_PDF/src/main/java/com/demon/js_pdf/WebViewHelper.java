@@ -8,6 +8,9 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.demon.js_pdf.code.BASE64Encoder;
+import com.demon.js_pdf.view.ProgressListener;
+
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -22,7 +25,7 @@ public class WebViewHelper {
     }
 
     @SuppressLint("SetJavaScriptEnabled")
-    public static void WebViewSetting(WebView webView, final PDFListener listener) {
+    public static void WebViewSetting(WebView webView, final ProgressListener listener) {
         WebSettings settings = webView.getSettings();
         settings.setSavePassword(false);
         settings.setJavaScriptEnabled(true);
@@ -67,9 +70,5 @@ public class WebViewHelper {
         }
     }
 
-
-    public interface PDFListener {
-        void LoadProgress(int progress);
-    }
 
 }
