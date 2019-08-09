@@ -93,7 +93,7 @@ or
 1. 增加自定义的DWebView（一个自带加载进度条的WebView）
 
 ### BUG or 问题
-请E-mail：757454343@qq.com 联系我。
+请在issues留言，定期回复。
 
 ### LICENSE
 
