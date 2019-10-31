@@ -89,9 +89,9 @@ or
 2. 引用pdf.js离线包会使apk增大4M左右，相较于[Android PdfViewer](https://github.com/barteksc/AndroidPdfViewer)有很大改善，而且无需下载即可访问pdf链接。  
 **如有仅仅需要打开网络pdf**，最好的做法是参考[mozilla/pdf.js](https://github.com/mozilla/pdf.js)和[DeMon-JS-PDF](https://github.com/DeMonLiu623/DeMon-JS-PDF/tree/master/JS_PDF/src/main/assets/pdf)将离线包其部署到自己的服务器上，然后再写一个html页面用于打开pdf，然后在移动端直接用WebView打开服务器上html。  
 优点：  
-1. 可以多端（Android，ios）同时使用。  
-2. 减少打包后的Apk体积。
-3. 服务器性能优于手机，pdf渲染速度理论上会更快。
+   1. 可以多端（Android，ios）同时使用。  
+   2. 减少打包后的Apk体积。
+   3. 服务器性能优于手机，pdf渲染速度理论上会更快。
 
 ### 版本
 #### 1.1
