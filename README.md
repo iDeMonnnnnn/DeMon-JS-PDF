@@ -1,7 +1,7 @@
 [![](https://jitpack.io/v/DeMonLiu623/DeMon-JS-PDF.svg)](https://jitpack.io/#DeMonLiu623/DeMon-JS-PDF)
 
 # DeMon-JS-PDF
-**一个基于[PDF.js](http://mozilla.github.io/pdf.js/)，使用cdn的方式导入,自定义界面的PDF预览框架。**
+**一个基于[PDF.js](http://mozilla.github.io/pdf.js/)，使用离线js包的方式导入,自定义界面的PDF预览框架。**
 
 原文链接：[Android 实现PDF预览的全面解析](https://blog.csdn.net/DeMonliuhui/article/details/81185611)  
 
@@ -83,6 +83,15 @@ or
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 ```
+
+### 扩展说明
+1. 已知bug，无法打开超过40M的PDF文件，原因猜测是Android WebView对于文件大小的限制。
+2. 引用pdf.js离线包会使apk增大4M左右，相较于[Android PdfViewer](https://github.com/barteksc/AndroidPdfViewer)有很大改善，而且无需下载即可访问pdf链接。  
+**如有仅仅需要打开网络pdf**，最好的做法是参考[mozilla/pdf.js](https://github.com/mozilla/pdf.js)和[DeMon-JS-PDF](https://github.com/DeMonLiu623/DeMon-JS-PDF/tree/master/JS_PDF/src/main/assets/pdf)将离线包其部署到自己的服务器上，然后再写一个html页面用于打开pdf，然后在移动端直接用WebView打开服务器上html。  
+优点：  
+1. 可以多端（Android，ios）同时使用。  
+2. 减少打包后的Apk体积。
+3. 服务器性能优于手机，pdf渲染速度理论上会更快。
 
 ### 版本
 #### 1.1
